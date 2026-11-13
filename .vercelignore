@@ -1,0 +1,9 @@
+# ملفات التسليم والعمل — لا تُرفع مع الموقع
+*.zip
+*.pdf
+INSTALL.md
+README.md
+dist/
+.build-*.json
+.DS_Store
+.serve-pids

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>كتلة/خام — عمارة مختزلة إلى كتلة وضوء وصمت</title>
+<meta name="description" content="كتلة/خام — استوديو عمارة يختزل المبنى إلى كتلةٍ وضوءٍ وصمت. موقعنا الجديد يُفتتح قريبًا.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="كتلة/خام — الافتتاح قريبًا">
+<meta property="og:description" content="عمارة مختزلة إلى كتلةٍ وضوءٍ وصمت.">
+<meta property="og:image" content="assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script>document.documentElement.className+=' js'</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/kufi-arabic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/readex-arabic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= طبقة الزجاج (WebGL) =================
+     لوحة رسم تغطي الشاشة الأولى: ترسم العنوان، وفوقه قطعة زجاج
+     ثلاثية الأبعاد تتبع المؤشر وتكسر الضوء. الضغط على الزجاج يغيّر شكله. -->
+<div class="glass" id="glass" role="button" tabindex="0"
+     aria-label="الافتتاح قريبًا — اضغط لتغيير شكل الزجاج">
+  <canvas id="glassCanvas" aria-hidden="true"></canvas>
+</div>
+
+<main class="screen" id="top">
+
+  <!-- ================= الهيدر ================= -->
+  <header class="nav" id="nav" data-appear="nav">
+    <a href="#top" class="logo" aria-label="كتلة/خام — الرئيسية">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__word">كتلة/خام</span>
+    </a>
+    <a href="mailto:hello@example.com" class="btn btn--ghost">
+      <span class="btn__roll"><span>احجز موعدًا</span><span aria-hidden="true">احجز موعدًا</span></span>
+    </a>
+  </header>
+
+  <!-- ================= المسرح: الكتلة الخرسانية ================= -->
+  <div class="stage" aria-hidden="true">
+    <div class="monolith" data-appear="monolith">
+      <img src="assets/img/monolith.jpg" width="800" height="864" alt="" decoding="async">
+    </div>
+    <div class="corners" data-appear="corners">
+      <svg class="c c--tl" viewBox="0 0 18 18"><path d="M1 17V1h16"/></svg>
+      <svg class="c c--tr" viewBox="0 0 18 18"><path d="M1 1h16v16"/></svg>
+      <svg class="c c--bl" viewBox="0 0 18 18"><path d="M1 1v16h16"/></svg>
+      <svg class="c c--br" viewBox="0 0 18 18"><path d="M1 17h16V1"/></svg>
+    </div>
+  </div>
+
+  <!-- العنوان — يُرسم داخل لوحة الزجاج، ويبقى هنا لقارئات الشاشة
+       وكبديل يظهر تلقائيًا إن لم يدعم المتصفح WebGL -->
+  <h1 class="headline" id="headline">الافتتاح قريبًا</h1>
+
+  <!-- ================= الأسفل ================= -->
+  <div class="bottom">
+    <p class="statement" data-appear="statement">عمارةٌ مُختزَلة إلى<br>كتلةٍ، وضوءٍ، وصمت.</p>
+    <a href="#top" class="btn btn--solid" id="explore" data-appear="cta">
+      <span class="btn__roll"><span>استكشف أعمالنا</span><span aria-hidden="true">استكشف أعمالنا</span></span>
+      <svg class="btn__arrow" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M10 10 2 2M2 9V2h7"/></svg>
+    </a>
+  </div>
+
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
